@@ -30,7 +30,7 @@ class ArraySel {
 
         for (out = 0; out < nElems -1 ; out++) {
             min = out;
-            
+
         }
     }
 }
