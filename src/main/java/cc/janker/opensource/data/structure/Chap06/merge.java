@@ -14,7 +14,11 @@ class MergeApp {
         display(arrayC,10);
     }
 
-    private static void display(int[] arrayC, int i) {
+    private static void display(int[] theArray, int size) {
+        for (int i = 0; i < size; i++) {
+            System.out.print(theArray[i] + " ");
+        }
+        System.out.println("");
     }
 
 
@@ -23,8 +27,18 @@ class MergeApp {
 
         while (aDex < sizeA && bDex < sizeB){
             if (arrayA[aDex] < arrayB[bDex]){
-                //arrayC[cDex++] =
+                arrayC[cDex++] = arrayA[aDex++];
+            }else{
+                arrayC[cDex++] = arrayB[bDex++];
             }
         }
+        while (aDex < sizeA){              //arrayB为空
+            arrayC[cDex++] = arrayA[aDex++];
+        }
+        while (bDex < sizeB){               //arrayA为空
+            arrayC[cDex++] = arrayB[bDex++];
+        }
     }
+
+
 }
